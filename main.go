@@ -2,41 +2,11 @@ package main
 
 import "fmt"
 
-type person struct {
-	firstName string
-	lastName  string
-}
+type cat struct{}
 
+func say() {
+	fmt.Println("meow")
+}
 func main() {
-	var alex person
-
-	//updating structs
-	alex.firstName = "Alex"
-	alex.lastName = "Anderson"
-	fmt.Printf("%+v", alex)
+	say()
 }
-
-/*
-type person struct {
-	firstName string
-	lastName  string
-}
-
-func main() {
-	alex := person{"Alex", "Anderson"}
-	fmt.Println(alex)
-}
-
-
-//second way
-
-type person struct {
-	firstName string
-	lastName  string
-}
-
-func main() {
-	alex := person{firstName: "Alex", lastName: "Anderson"}
-	fmt.Println(alex)
-}
-*/
