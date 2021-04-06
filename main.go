@@ -4,9 +4,11 @@ import "fmt"
 
 type cat struct{}
 
-func say() {
+func (c *cat) say() {
 	fmt.Println("meow")
 }
+
 func main() {
-	say()
+	cat := &cat{}
+	cat.say()
 }
