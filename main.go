@@ -23,7 +23,16 @@ func main() {
 			zipCode: 560899,
 		},
 	}
-	fmt.Printf("%+v\n", jim)
+
+	jimPointer := &jim
+	jimPointer.updateName("jimmy")
+	jim.print()
 }
 
-//embedded struct inside another
+func (pointerToPerson *person) updateName(newFirstName string) {
+	(*pointerToPerson).firstName = newFirstName
+}
+
+func (p person) print() {
+	fmt.Printf("%+v\n", p)
+}
